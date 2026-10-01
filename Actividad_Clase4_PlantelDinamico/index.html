@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Futbolista - TP Flexbox</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="card">
+    <header class="card-header">
+      <h1>Crear Carta de Jugador</h1>
+      <p>6to Ano - Laboratorio de Aplicaciones (ITLP)</p>
+    </header>
+
+    <form class="card-form">
+
+      <fieldset>
+        <legend>Datos Personales</legend>
+
+        <div class="field field-main">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Lionel Messi" required>
+        </div>
+
+        <div class="field field-small">
+          <label for="dorsal">Camiseta (1-99) *</label>
+          <input type="number" id="dorsal" name="dorsal" min="1" max="99" placeholder="10" required>
+        </div>
+
+        <div class="field">
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="nacimiento" name="nacimiento">
+        </div>
+
+        <div class="field">
+          <label for="pais">Seleccion / Pais</label>
+          <select id="pais" name="pais">
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Francia">Francia</option>
+            <option value="Espana">Espana</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="field field-full">
+          <label for="foto">Foto de perfil</label>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Atributos de Juego</legend>
+
+        <div class="field field-full">
+          <label>Posicion en la cancha:</label>
+          <div class="options">
+            <label><input type="radio" name="posicion" value="Arquero"> Arquero</label>
+            <label><input type="radio" name="posicion" value="Defensor"> Defensor</label>
+            <label><input type="radio" name="posicion" value="Mediocampista"> Mediocampista</label>
+            <label><input type="radio" name="posicion" value="Delantero" checked> Delantero</label>
+          </div>
+        </div>
+
+        <div class="field field-full">
+          <label>Fortalezas principales:</label>
+          <div class="options">
+            <label><input type="checkbox" name="fortaleza" value="Velocidad" checked> Velocidad</label>
+            <label><input type="checkbox" name="fortaleza" value="Definicion" checked> Definicion</label>
+            <label><input type="checkbox" name="fortaleza" value="Pase"> Pase</label>
+            <label><input type="checkbox" name="fortaleza" value="Gambeta" checked> Gambeta</label>
+            <label><input type="checkbox" name="fortaleza" value="Cabezazo"> Cabezazo</label>
+            <label><input type="checkbox" name="fortaleza" value="Marca"> Marca</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="velocidad">Velocidad (1 al 10)</label>
+          <input type="range" id="velocidad" name="velocidad" min="1" max="10" value="9">
+        </div>
+
+        <div class="field">
+          <label for="tecnica">Tecnica (1 al 10)</label>
+          <input type="range" id="tecnica" name="tecnica" min="1" max="10" value="10">
+        </div>
+
+        <div class="field field-small">
+          <label for="color">Color camiseta</label>
+          <input type="color" id="color" name="color" value="#75aadb">
+        </div>
+      </fieldset>
+
+      <fieldset class="field-full">
+        <legend>Trayectoria</legend>
+        <div class="field field-full">
+          <label for="resena">Breve reseña</label>
+          <textarea id="resena" name="resena" rows="3" placeholder="Escribi una breve resena de la carrera del jugador..."></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn-submit">CREAR FICHA</button>
+
+    </form>
+  </main>
+
+<div id="plantel"></div>
+<script src="script.js"></script>
+</body>
+</html>
