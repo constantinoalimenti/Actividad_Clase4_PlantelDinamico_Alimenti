@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f4f8;
+  color: #1f2933;
+}
+
+header {
+  text-align: center;
+  padding: 24px 16px 8px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 16px;
+}
+
+#plantel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.ficha {
+  width: 240px;
+  background: #ffffff;
+  border: 2px solid #75aadb;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ficha h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.ficha p {
+  margin: 4px 0;
+}
+
+.destacado {
+  background: #fff8d6;
+  border-color: #f2b705;
+}
+
+.capitan {
+  box-shadow: 0 0 0 4px #75aadb;
+}
